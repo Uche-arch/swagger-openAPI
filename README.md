@@ -12,7 +12,7 @@ This project allows you to create, read, and delete to-dos using a RESTful API. 
 - **POST `/todos`**: Create a new to-do by adding a task.
 - **DELETE `/todos/{id}`**: Delete a to-do by its ID.
 
-The API is fully documented with Swagger UI at `http://localhost:3000/api-docs`.
+The API is fully documented with Swagger UI at `https://swagger-openapi-1.onrender.com/api-docs`.
 
 ## Technologies Used
 
@@ -26,7 +26,7 @@ The API is fully documented with Swagger UI at `http://localhost:3000/api-docs`.
 1. **Clone the repository:**
 
 ```bash
-   git clone https://github.com/yourusername/todo-api.git
+   git clone https://github.com/Uche-arch/swagger-openAPI.git
    cd todo-api
 ```
 
@@ -39,11 +39,11 @@ The API is fully documented with Swagger UI at `http://localhost:3000/api-docs`.
 3. **Run the server:**
 
 ```bash
-  npm start
+  node server.js
 ```
 
 ## API Documentation (Swagger UI)
 Once the server is running, you can access the Swagger UI to interact with the API at:
 
-[Here](https:chatgpt.com)
+[https://swagger-openapi-1.onrender.com/api-docs]
 
