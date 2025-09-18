@@ -41,6 +41,8 @@ app.delete("/todos/:id", (req, res) => {
 
 // Start server
 app.listen(3000, () => {
-  console.log("Server running on http://localhost:3000");
-  console.log("Swagger docs available at http://localhost:3000/api-docs");
+  console.log("Server running on https://swagger-openapi-1.onrender.com");
+  console.log(
+    "Swagger docs available at https://swagger-openapi-1.onrender.com/api-docs"
+  );
 });
