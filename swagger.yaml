@@ -1,0 +1,76 @@
+openapi: 3.0.0
+info:
+  title: Todo API
+  version: 1.0.0
+  description: A simple To-do API for practicing OpenAPI & Swagger docs
+
+servers:
+  - url: http://localhost:3000
+    description: Local Development
+
+tags:
+  - name: To-do APIs
+    description: Different to-do API's built for practice
+
+paths:
+  /todos:
+    get:
+      tags:
+        - ---
+      summary: Renders/Displays all todos
+      description: |
+        Returns a list of all todos currently in the system.
+
+        -- Click try it out, and then execute.
+
+        -- Scroll down to the server response, you'd see the Response body displaying all the todos.
+      responses:
+        200:
+          description: All todos displayed
+    post:
+      tags:
+        - ---
+      summary: Create/Add a new todo
+      description: |
+        Add a new task to your todo list.
+
+        -- Click Try it out, and then under the Request body add task
+        
+        -- Click Execute
+
+        -- Scroll down to the server response, you'd see the Response body showing that the task was added.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                task:
+                  type: string
+                  description: The task for the todo
+                  example: "Buy groceries"
+              required:
+                - task
+      responses:
+        201:
+          description: Todo created successfully
+
+  /todos/{id}:
+    delete:
+      tags:
+        - ---
+      summary: Delete a todo by ID
+      description: Removes a specific todo from the list.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the todo to delete
+      responses:
+        200:
+          description: Todo deleted successfully
+        404:
+          description: Todo not found
